@@ -1,0 +1,84 @@
+header {
+    background-color: brown;
+    height: 75px;
+}
+.header {
+    display: flex;
+    align-items: center;
+     margin-left: 200px;
+}
+
+.header2{
+    display: flex;
+    margin-top: 5px;
+}
+
+.image{
+    margin-top: 5px;
+}
+.text {
+    padding-left: 5px;
+    padding-top: 12px;
+    color: white;
+
+}
+
+.field1{
+    margin-left: 40px;
+    width:500px;
+    color: black;
+  //  background-color: white;
+}
+
+.images {
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+.image2 {
+    margin-right: 20px;
+}
+
+.buttons {
+    background-color: brown;
+}
+
+.Topfileds {
+    display: flex;
+
+}
+
+.book {
+    margin-top: 20px;
+    margin-left: 230px;
+}
+
+.Options {
+    margin-left: 700px;
+    margin-top: 20px;
+    width: 200px;
+
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+.book_Image {
+    width: 150px;
+    height: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F5F5F5;
+}
+
+.bookPage1 {
+    margin-top: 20px;
+    display: flex;
+}
+

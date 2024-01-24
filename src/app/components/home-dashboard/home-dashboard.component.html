@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="image">
+<img style="width: 50px;height: auto;" src="assets/education.png">
+</div>
+<h1 class="NameOfStore">BookStore</h1>
+    
+<mat-form-field appearance="outline" class="search"   >
+    <mat-icon matPrefix >search</mat-icon>
+    <input matInput placeholder="Search" >
+</mat-form-field>
+
+<button mat-button class="custom-button" [matMenuTriggerFor]="menu">
+    <mat-icon matPrefix class="custom-icon">person</mat-icon>
+    <div class="custom-icon-name">Account</div>
+</button>
+<mat-menu #menu="matMenu" class="menu">
+    <h2>Welcome</h2>
+    <p>To Access account and manage Orders</p>
+    <button mat-button>Item 1</button>
+    <hr>
+    <a mat-button href="https://www.google.com/" target="_blank">My Orders </a>
+</mat-menu>
+
+<button mat-button class="custom-button">
+    <mat-icon matPrefix>shopping_cart</mat-icon>
+    <div class="icon-name">Cart</div>
+</button>
+</div>
+
+

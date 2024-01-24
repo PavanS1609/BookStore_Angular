@@ -1,0 +1,121 @@
+<body>
+<div class="empty-div">
+    <div class="img-div">
+        <mat-card class="img-card">
+            <mat-card-content class="img-content">
+                <img src="assets/2766594.png">
+            </mat-card-content>
+            <mat-card-content class="tile-name">ONLINE BOOK SHOPPING</mat-card-content>
+        </mat-card>
+    </div>
+    <div>
+        <mat-card class="detailsCard">
+            <mat-tab-group dynamicHeight>
+                <mat-tab label="LOGIN">
+                    <mat-card>
+                        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                            <div>
+                                <mat-form-field style="width: 360px;" appearance="outline">
+                                    <mat-label>email</mat-label>
+                                    <input matInput placeholder="email" formControlName="Email">
+                                    <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+                                        Email is required
+                                    </mat-error>
+                                    <mat-error *ngIf="loginForm.get('email')?.hasError('pattern')">
+                                        Please provide a valid email address
+                                    </mat-error>
+                                     
+                                </mat-form-field><br>
+
+                                <mat-form-field style="width: 360px;" appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" placeholder="password" formControlName="password">
+                                    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                                        password is required
+                                    </mat-error>
+                                    <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+                                        password is short
+                                    </mat-error>
+                                    <mat-error
+                                        *ngIf="!loginForm.get('password')?.hasError('required') && !loginForm.get('password')?.hasError('minlength')">
+                                        password is invalid
+                                    </mat-error>
+                                </mat-form-field><br><br>
+
+                                <div>
+                                    <button mat-flat-button
+                                        style="background: #A03037;color:#fff;width: 360px;">Login</button>
+                                </div>
+                            </div><br>
+                            <mat-card-content><hr></mat-card-content><br>
+                            <mat-card-actions class="social-buttons">
+                                <button mat-flat-button style="margin-left: 70px; width: 100px;"
+                                    color="primary">facebook</button>
+                                <button mat-stroked-button
+                                    style="margin-right: 65px; width: 110px; background: #F5F5F5 0% 0% no-repeat padding-box;">google</button>
+                            </mat-card-actions>
+                        </form>
+                    </mat-card>
+                </mat-tab>
+
+                <mat-tab label="SIGNUP">
+                    <mat-card>
+                        <form [formGroup]="RegisterForm" (ngSubmit)="onSignUp()">
+                            <div>
+                                <span>
+                                    <mat-form-field class="fieldStyles1" appearance="outline">
+                                        <mat-label>Full Name</mat-label>
+                                        <input matInput placeholder="Full Name" formControlName="FullName">
+                                        <mat-error>Name is required</mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field style="margin-left: 27px;" class="fieldStyles1"
+                                        appearance="outline">
+                                        <mat-label>Mobile Number</mat-label>
+                                        <input matInput placeholder="Mobile Number" formControlName="MobileNumber">
+                                        <mat-error>Mobile Number is required</mat-error>
+                                    </mat-form-field>
+                                </span>
+                                <mat-form-field class="fieldStyles" appearance="outline">
+                                    <mat-label>email</mat-label>
+                                    <input matInput placeholder="email" type="email" formControlName="Email">
+                                    <mat-error>email is required</mat-error>
+                                </mat-form-field>
+
+                                <mat-form-field class="fieldStyles" appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput type="password" placeholder="password" formControlName="password">
+                                    <mat-error>password is required</mat-error>
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field class="fieldStyles" appearance="outline">
+                                    <mat-label>Address</mat-label>
+                                    <input matInput placeholder="address" formControlName="Address">
+                                    <mat-error>Address is required</mat-error>
+                                </mat-form-field>
+                                <div style="margin-top: 6px;">
+                                    <span>
+                                        <mat-form-field class="fieldStyles1" appearance="outline">
+                                            <mat-label>State</mat-label>
+                                            <input matInput placeholder="state" formControlName="State">
+                                            <mat-error>State is required</mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field style="margin-left: 27px;" class="fieldStyles1"
+                                            appearance="outline">
+                                            <mat-label>City</mat-label>
+                                            <input matInput placeholder="city" formControlName="City">
+                                            <mat-error>City is required</mat-error>
+                                        </mat-form-field>
+                                    </span>
+                                </div>
+                                <br>
+                                <button mat-flat-button
+                                    style="background: #A03037; color:#fff;width: 327px;">SIGNUP</button>
+                            </div>
+                        </form>
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>
+</body>

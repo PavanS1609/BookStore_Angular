@@ -1,0 +1,89 @@
+body {
+    background-color: grey;
+    background: grey 100% 100% repeat;
+    background-position: 100%;
+}
+
+.fieldStyles {
+    width: 327px;
+    height: 2px;
+    margin-top: 15px;
+}
+
+.fieldStyles1 {
+    width: 150px;
+    height: 2px;
+    margin-top: 10px;
+}
+
+.fieldStyles2 {
+    width: 150px;
+    height: 2px;
+    margin: 10px;
+}
+
+.empty-div {
+    position: relative;
+}
+
+.img-card {
+    width: 624px;
+    height: 320px;
+    top: 125px;
+    left: 320px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 21px;
+    opacity: 1;
+    position: absolute;
+}
+
+
+img {
+    margin-top: 20px;
+    margin-left: 40px;
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.tile-name {
+    width: 209px;
+    height: 30px;
+    text-align: left;
+   
+    margin-left: 80px;
+    margin-top: 25px;
+    color: #0A0102;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.mat-card>:first-child,
+.mat-card-content>:first-child {
+    margin-top: 13px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailsCard {
+    height: 450px;
+    width: 389px;
+    top: 58px;
+    left: 658px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #00000029;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    opacity: 1;
+    position: absolute;
+    margin-right: 20px;
+}
+
+hr{
+    width: 150px;
+}

@@ -1,0 +1,71 @@
+<div>
+    <header>
+        <div class="header">
+            <div class="header2">
+                <div class="image">
+                    <img src="assets/education.png">
+                </div>
+                <div class="text">
+                    <h1>BookStore</h1>
+                </div>
+            </div>
+            <div class="header2">
+                <mat-form-field class="field1" appearance="outline">
+                    <mat-label>Search</mat-label>
+                    <input matInput placeholder="Search">
+                </mat-form-field>
+                <div class="images">
+                    <button mat-flat-button class="buttons">
+                        <img class="image2" src="assets/shopping_cart.svg">
+                    </button>
+                    <button mat-flat-button class="buttons">
+                        <img class="image3" src="assets/person.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body>
+        <div class="Topfileds">
+            <h1 class="book">
+                Books
+            </h1>
+            <mat-form-field class="Options" appearance="outline">
+                <mat-label>Sort By relevance</mat-label>
+                <mat-select>
+                    <mat-option value="Name">Low to High</mat-option>
+                    <mat-option value="Price">High to Low</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <!-- <button class="Options" mat-button [matMenuTriggerFor]="menu">Sort By relevance</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item >Low to High</button>
+                <button mat-menu-item >High to Low</button>
+            </mat-menu> -->
+        </div>
+        <div class="display">
+            <div *ngFor="let book of allBooks">
+                <mat-card class="bookPage1">
+                    <div class="bookPage" (click)="quickView(book)">
+                        <div>
+                            <img mat-card-image class="book_Image" src="{{book.book_Image}}" alt="No Image">
+                        </div>
+                        <div>
+                            <mat-card-content>
+                                <p class="book_Name"> {{book.book_Name}}</p>
+                                <p class="author_Name"> by {{book.author_Name}}</p>
+                                <p class="book_Rating"> {{book.book_Rating}}</p>
+                                <p class="book_Price"> Rs. {{book.book_Price}}</p>
+                            </mat-card-content>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </body>
+
+</div>
+
+<mat-paginator [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]" [length]="length" [pageIndex]="currentPage"
+    (page)="onPageChange($event)">
+</mat-paginator>

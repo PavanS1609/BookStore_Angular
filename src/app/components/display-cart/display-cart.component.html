@@ -1,0 +1,137 @@
+<div>
+    <header>
+        <div class="header">
+            <div class="image1">
+                <img src="assets/education.png">
+            </div>
+            <div class="text">
+                <h1>BookStore</h1>
+            </div>
+        </div>
+    </header>
+
+    <body class="body">
+        <mat-accordion class="card">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header class="panelSize">
+                    My Cart
+                </mat-expansion-panel-header>
+                <div *ngFor="let book of booksList" class="cart">
+                    <div class="field6">
+                        <img class="image" src="{{book.book_Image}}">
+                    </div>
+                    <div class="field5">
+                        <mat-card-header class="field1">
+                            {{book.book_Name}}
+                        </mat-card-header>
+                        <br>
+                        <mat-card-content class="field2">
+                            by {{book.author_Name}}
+                        </mat-card-content>
+                        <br>
+                        <mat-card-content class="field3">
+                            Rs. {{book.book_Price}}
+                        </mat-card-content>
+                        <br>
+                        <button mat-icon-button (click)="decrementQuantity(book)">
+                            <mat-icon>remove</mat-icon>
+                        </button>
+                        <input [value]="book.quantity" disabled style="width: 40px; text-align: center;">
+                        <button mat-icon-button (click)="incrementQuantity(book)">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                        <span style="font-weight: '500'; margin-left: 10px;">
+                            <input value="Deleted from Cart Successfully....!" #message style="display: none;">
+                            <input value="Ok" #action style="display: none;">
+                            <button mat-stroked-button color="warn"
+                                (click)="onRemoveCartBook(book,message.value, action.value)">Remove</button>
+                        </span>
+                        <br>
+                    </div>
+
+                </div>
+                <button mat-button (click)=Orders(booksList) class="Submit">
+                    submit
+                </button>
+            </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion class="customer">
+            <mat-expansion-panel class="panelSize" hideToggle>
+                <mat-expansion-panel-header class="panelSize">
+                    <mat-panel-title>
+                        Customer_Address Details
+                    </mat-panel-title>
+                    <button mat-button type="submit">Add Address </button>
+                </mat-expansion-panel-header>
+                <form [formGroup]="Customer_Details" (ngSubmit)="addAddress()">
+                    <div class="customerDetails">
+                        <mat-form-field class="form1" appearance="outline">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput placeholder=" Name" formControlName="customer_Name">
+                            <mat-error>Name is required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="form2" appearance="outline">
+                            <mat-label>Mobile Number</mat-label>
+                            <input matInput placeholder="Mobile Number" formControlName="customer_Number">
+                            <mat-error>Mobile Number is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field class="form3" appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input matInput placeholder="address" formControlName="Address">
+                        <mat-error>Address is required</mat-error>
+                    </mat-form-field>
+                    <div class="customerDetails">
+                        <mat-form-field class="form1" appearance="outline">
+                            <mat-label>State</mat-label>
+                            <input matInput placeholder="state" formControlName="State">
+                            <mat-error>State is required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="form2" appearance="outline">
+                            <mat-label>City</mat-label>
+                            <input matInput placeholder="city" formControlName="City">
+                            <mat-error>City is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <button mat-button type="submit">Submit </button>
+
+                </form>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <mat-accordion class="customer" >
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    Order Summary
+                </mat-expansion-panel-header>
+                <div *ngFor="let cart of cartList" class="cart">
+                    <div class="field6">
+                        <img class="image" src="{{cart.book_Image}}">
+                    </div>
+                    <div class="field5">
+                        <mat-card-header class="field1">
+                            {{cart.book_Name}}
+                        </mat-card-header>
+                        <br>
+                        <mat-card-content class="field2">
+                            by {{cart.author_Name}}
+                        </mat-card-content>
+                        <br>
+                        <mat-card-content class="field3">
+                            Rs. {{cart.book_Price * cart.quantity}}
+                        </mat-card-content>
+                        <br>
+                        <button mat-icon-button (click)="Orders(cartList)" >Place Order</button>
+                    </div>
+                </div>
+
+            </mat-expansion-panel>
+        </mat-accordion>
+    </body>
+</div>
+
+
+
+
+
+<!-- (click)="onRemoveCartBook(book)" -->

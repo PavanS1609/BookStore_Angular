@@ -1,0 +1,74 @@
+.QuickView{
+    display: block;
+    width: auto !important;
+    height: auto !important;
+}
+
+header{
+    display: flex;
+}
+.book_Image{
+    width: 300px;
+    height: 350px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    margin-left:-5px;
+    
+}
+.card{
+    width: 350px;
+    top: 15px;
+    margin-bottom: 15px;
+}
+
+.button1{
+background-color: brown ;
+color:hsl(0, 12%, 97%);
+width: 175px;
+}
+.button2 {
+    margin-left: 20px;
+    background-color: brown;
+    color: hsl(0, 12%, 97%);
+    width: 175px;
+}
+
+.content{
+    display: flex;
+}
+
+.content1 {
+    margin-top: 10px;
+    margin-left: 5px;
+
+}
+.imageButtons{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.content2 {
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.field1
+{
+    font-weight:bold ;
+}
+.field2{
+    color: gray;
+}
+.field3{
+    background-color: green;
+    width:50px;
+    color: white;
+    text-align: center;
+}
+
+.star{
+    background-color: gray;
+}
+

@@ -1,0 +1,75 @@
+header {
+    background-color: brown;
+    height: 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+
+}
+
+.text {
+    padding-left: 5px;
+    padding-top: 12px;
+    color: white;
+
+}
+
+.body {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 700px;
+   
+  
+}
+
+.customer{
+    width: 700px;
+    margin-top: 20px;
+}
+
+.customerDetails{
+    display:flex;
+   
+
+}
+
+.form1{
+    width: 150px;
+}
+.form2{
+    width: 300px;
+    margin-left: 20px;
+}
+.form3{
+    min-width: 300px;
+    background-color: aqua;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.field5{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.cart{
+    display: flex;
+}
+
+.Submit{
+    margin-left: 550px;
+    background-color: aquamarine;
+}

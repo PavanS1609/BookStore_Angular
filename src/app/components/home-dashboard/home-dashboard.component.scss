@@ -1,0 +1,60 @@
+.icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.icon {
+    margin-bottom: 4px;
+    /* Adjust as needed for spacing between icon and text */
+}
+.icon-input{position: relative;}
+
+.custom-button {
+    height: 65px;
+    /* Adjust the height as needed */
+    width: 100px;
+    /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-icon {
+    margin: 0px;
+    /* Adjust as needed for spacing between icon and text */
+}
+
+.custom-icon-name {
+    margin: 0px;
+   
+    /* Adjust the font size as needed */
+}
+
+.header{
+    display: flex;
+    background-color: aqua;
+    z-index: 2;
+   
+}
+
+.search{
+    width: 500px;
+    margin-left: 40px;
+}
+.image{
+    margin-left: 70px;
+   
+}
+.custom-form-field {
+    background-color:green;
+    /* Set the background color to white */
+}
+.menu{
+    margin-left: 10px;
+}
+p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
